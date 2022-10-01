@@ -30,7 +30,7 @@ twitter_username: ascii_dinosaur
 github_username:  dwgnr
 
 # Build settings
-theme: minimal
+theme: minima
 plugins:
   - jekyll-feed
 
