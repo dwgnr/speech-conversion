@@ -1,0 +1,115 @@
+
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title>SLT 22 Demo</title>
+      <link rel="shortcut icon" href="./img/favicon.ico">
+    </head>
+    <body>
+      <article>
+        <header>
+          <h1>Generative Models for Improved Naturalness, Intelligibility, and Voicing of Whispered Speech</h1>
+        </header>
+      </article>
+      <div>
+          <h3>Paper</h3>
+          Accepted at the 2022 IEEE Spoken Language Technology Workshop (SLT 2022)
+      </div>
+      <div>
+            <h3>Code</h3>
+            The source code is available on <a href="https://github.com/dwgnr/speech-conversion"> GitHub</a>.
+      </div>
+      <div>
+          <h3>Authors</h3>
+          <a href="mailto:dominik.wagner@th-nuernberg.de">Dominik Wagner</a> (TH Nürnberg), 
+          Sebastian P. Bayerl (TH Nürnberg), 
+          Hector A. Cordourier Maruri (Intel), 
+          Tobias Bocklet (TH Nürnberg)
+      </div>
+      <div>
+          <h3>Abstract</h3>
+          This work adapts two recent architectures of generative models and evaluates their effectiveness 
+          for the conversion of whispered speech to normal speech. 
+          We incorporate the normal target speech into the training 
+          criterion of vector-quantized variational autoencoders (VQ-VAEs) and MelGANs, 
+          thereby conditioning the systems to recover voiced speech from whispered inputs. 
+          Objective and subjective quality measures indicate that both VQ-VAEs and MelGANs 
+          can be modified to perform the conversion task. We find that the proposed approaches significantly 
+          improve the Mel cepstral distortion (MCD) metric by at least 25% relative to a DiscoGAN baseline. 
+          Subjective listening tests suggest that the MelGAN-based system significantly improves naturalness, 
+          intelligibility, and voicing compared to the whispered input speech. 
+          A novel evaluation measure based on differences between latent speech representations 
+          also indicates that our MelGAN-based approach yields improvements relative to the baseline.     
+         </div>
+      <div>
+        <h3>Audio Samples (<a href="http://www.isle.illinois.edu/sst/data/wTIMIT/">wTIMIT</a> dataset)</h3>
+        <table>
+          <tr>
+              <th>Whispered Input</th>
+              <th>Normal Target</th>
+              <th>DiscoGAN (baseline)</th>
+              <th>SC-MelGAN (ours)</th>
+              <th>SC-VQ-VAE+WG (ours)</th>
+              <th>SC-VQ-VAE+GAN (ours)</th>
+          </tr>
+          <tr>
+            <td colspan="6" align="center">Speaker 014 <small>(male)</small>: <i>"Correct execution of my instructions is crucial."</i></td>
+          </tr>
+          <tr>
+              <td><audio controls><source src="audio/whisper/s014u147.wav"></audio></td>
+              <td><audio controls><source src="audio/normal/s014u147.wav"></audio></td>
+              <td><audio controls><source src="audio/discogan/s014u147w.wav"></audio></td>
+              <td><audio controls><source src="audio/melgan/s014u147w.wav"></audio></td>
+              <td><audio controls><source src="audio/vqvae+wg/s014u147w.wav"></audio></td>
+              <td><audio controls><source src="audio/vqvae+g/s014u147w.wav"></audio></td>
+          </tr>
+          <tr>
+            <td colspan="6" align="center">Speaker 015 <small>(male)</small>: <i>"The previous speaker presented ambiguous results."</i></td>
+          </tr>
+          <tr>
+            <td><audio controls><source src="audio/whisper/s015u151.wav"></audio></td>
+            <td><audio controls><source src="audio/normal/s015u151.wav"></audio></td>
+            <td><audio controls><source src="audio/discogan/s015u151w.wav"></audio></td>
+            <td><audio controls><source src="audio/melgan/s015u151w.wav"></audio></td>
+            <td><audio controls><source src="audio/vqvae+wg/s015u151w.wav"></audio></td>
+            <td><audio controls><source src="audio/vqvae+g/s015u151w.wav"></audio></td>
+        </tr>
+        <tr>
+            <td colspan="6" align="center">Speaker 105 <small>(female)</small>: <i>"The eastern coast is a place for pure pleasure and excitement."</i></td>
+          </tr>
+        <tr>
+            <td><audio controls><source src="audio/whisper/s105u054.wav"></audio></td>
+            <td><audio controls><source src="audio/normal/s105u054.wav"></audio></td>
+            <td><audio controls><source src="audio/discogan/s105u054w.wav"></audio></td>
+            <td><audio controls><source src="audio/melgan/s105u054w.wav"></audio></td>
+            <td><audio controls><source src="audio/vqvae+wg/s105u054w.wav"></audio></td>
+            <td><audio controls><source src="audio/vqvae+g/s105u054w.wav"></audio></td>
+        </tr>
+        <tr>
+            <td colspan="6" align="center">Speaker 117 <small>(male)</small>: <i>"Trespassing is forbidden and subject to penalty."</i></td>
+          </tr>
+        <tr>
+            <td><audio controls><source src="audio/whisper/s117u121.wav"></audio></td>
+            <td><audio controls><source src="audio/normal/s117u121.wav"></audio></td>
+            <td><audio controls><source src="audio/discogan/s117u121w.wav"></audio></td>
+            <td><audio controls><source src="audio/melgan/s117u121w.wav"></audio></td>
+            <td><audio controls><source src="audio/vqvae+wg/s117u121w.wav"></audio></td>
+            <td><audio controls><source src="audio/vqvae+g/s117u121w.wav"></audio></td>
+        </tr>
+        <tr>
+            <td colspan="6" align="center">Speaker 130 <small>(female)</small>: <i>"Birthday parties have cupcakes and ice cream."</i></td>
+          </tr>
+        <tr>
+            <td><audio controls><source src="audio/whisper/s130u107.wav"></audio></td>
+            <td><audio controls><source src="audio/normal/s130u107.wav"></audio></td>
+            <td><audio controls><source src="audio/discogan/s130u107w.wav"></audio></td>
+            <td><audio controls><source src="audio/melgan/s130u107w.wav"></audio></td>
+            <td><audio controls><source src="audio/vqvae+wg/s130u107w.wav"></audio></td>
+            <td><audio controls><source src="audio/vqvae+g/s130u107w.wav"></audio></td>
+        </tr>
+        </table>
+      </div>  
+      <br>
+      <br>
+    </body>
+  </html>
