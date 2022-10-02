@@ -1,0 +1,35 @@
+{
+    "train_config": {
+        "fp16_run": false,
+        "output_directory": "./data/checkpoint/waveglow_model",
+        "epochs": 10000,
+        "learning_rate": 1e-4,
+        "sigma": 1.0,
+        "iters_per_checkpoint": 1000,
+        "batch_size": 6,
+        "seed": 1234,
+        "checkpoint_path": "",
+        "with_tensorboard": true
+    },
+    "data_config": {
+        "training_files": "./data/train_files.txt",
+        "test_files": "./data/normal_test_files.txt",
+        "dataset": "melgan_compatible",
+        "spk_id": null,
+        "segment_length": 8192,
+        "sampling_rate": 16000
+    },
+
+    "waveglow_config": {
+        "n_mel_channels": 80,
+        "n_flows": 12,
+        "n_group": 8,
+        "n_early_every": 4,
+        "n_early_size": 2,
+        "WN_config": {
+            "n_layers": 8,
+            "n_channels": 256,
+            "kernel_size": 3
+        }
+    }
+}

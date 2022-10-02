@@ -1,0 +1,10 @@
+torch
+tensorflow
+numpy
+inflect
+librosa
+scipy
+tensorboardX
+Unidecode
+pillow
+matplotlib

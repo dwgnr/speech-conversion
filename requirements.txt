@@ -1,0 +1,10 @@
+torch
+numpy
+scipy
+PyYAML
+librosa
+SoundFile
+inflect
+tensorboardX
+Unidecode
+pillow
