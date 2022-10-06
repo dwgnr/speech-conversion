@@ -10,7 +10,7 @@ Andrej Karpathy's [implementation](https://github.com/karpathy/deep-vector-quant
 
 The WaveGlow system is a slightly adapted version of the code provided by [NVIDIA](https://github.com/NVIDIA/waveglow). 
 
-Please visit our [demo website](https://dwgnr.github.io/speech-conversion/) for samples. 
+Please visit our [demo website](https://th-nuernberg.github.io/speech-conversion-demo/) for samples. 
 
 ## Structure of this Repository
 
